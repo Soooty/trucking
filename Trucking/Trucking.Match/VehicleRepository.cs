@@ -13,8 +13,11 @@ internal class VehicleRepository
         }
     }
 
-    internal Vehicle VehicleForJob(Job job)
+    internal Vehicle? VehicleForJob(Job job)
     {
-        throw new NotImplementedException();
+        var vehicle = mVehicles.FirstOrDefault(v=>!v.ReservedForJob && v.CompatibleJobs.Contains(job.Type));
+        if (vehicle != null)
+            vehicle.Reserve();
+        return vehicle;
     }
 }
