@@ -13,7 +13,7 @@ internal class JobMatcher
     internal Dictionary<int, int> Match()
     {
         var matchedJobs = new Dictionary<int, int>();
-        foreach(var job in mJobRepository.Jobs())
+        foreach (var job in mJobRepository.Jobs().Values)
         {
             var vehicleForJob = mVehicleRepository.VehicleForJob(job);
             if (vehicleForJob != null)
