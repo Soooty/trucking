@@ -6,4 +6,7 @@ VehicleRepository vehicleRepository = new VehicleRepository(input.AsSpan(1,numbe
 int numberOfJobs = int.Parse(input[numberOfVehicles + 1]);
 JobRepository jobRepository = new JobRepository(input.AsSpan(numberOfVehicles+2, numberOfJobs));
 
+var jobMatcher = new JobMatcher(vehicleRepository, jobRepository);
+
+Dictionary<int, int> output = jobMatcher.Match();
 Console.ReadLine();
