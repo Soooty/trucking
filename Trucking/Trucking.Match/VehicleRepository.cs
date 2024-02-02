@@ -4,7 +4,7 @@ using Trucking.Vehicle;
 internal class VehicleRepository
 {
     List<Vehicle> mVehicles = new List<Vehicle>();
-    public VehicleRepository(Span<string> vehicles)
+    public VehicleRepository(IEnumerable<string> vehicles)
     {
         foreach (string vehicle in vehicles)
         {

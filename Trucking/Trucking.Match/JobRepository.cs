@@ -5,7 +5,7 @@ internal class JobRepository
 {
     List<Job> mJobs = new List<Job>();
 
-    public JobRepository(Span<string> jobs)
+    public JobRepository(IEnumerable<string> jobs)
     {
         foreach (string job in jobs)
         {

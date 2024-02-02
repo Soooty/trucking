@@ -1,10 +1,10 @@
 ﻿string[] input = File.ReadAllLines(args[0]);
 
 int numberOfVehicles = int.Parse(input[0]);
-VehicleRepository vehicleRepository = new VehicleRepository(input.AsSpan(1,numberOfVehicles));
+VehicleRepository vehicleRepository = new VehicleRepository(input.Take(new Range(1, numberOfVehicles)));
 
 int numberOfJobs = int.Parse(input[numberOfVehicles + 1]);
-JobRepository jobRepository = new JobRepository(input.AsSpan(numberOfVehicles+2, numberOfJobs));
+JobRepository jobRepository = new JobRepository(input.Take(new Range(numberOfVehicles + 2, numberOfJobs)));
 
 var jobMatcher = new JobMatcher(vehicleRepository, jobRepository);
 
