@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Trucking.Match": {
+      "commandName": "Project",
+      "commandLineArgs": "TesztFeladatImput.txt"
+    }
+  }
+}
