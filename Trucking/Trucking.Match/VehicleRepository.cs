@@ -1,4 +1,5 @@
-﻿using Trucking.Vehicle;
+﻿using Trucking.Job;
+using Trucking.Vehicle;
 
 internal class VehicleRepository
 {
@@ -10,5 +11,13 @@ internal class VehicleRepository
             var x = vehicle.Split(' ');
             mVehicles.Add(new Vehicle(int.Parse(x[0]), x.Skip(1).ToHashSet()));
         }
+    }
+
+    internal Vehicle? VehicleForJob(Job job)
+    {
+        var vehicle = mVehicles.FirstOrDefault(v=>!v.ReservedForJob && v.CompatibleJobs.Contains(job.Type));
+        if (vehicle != null)
+            vehicle.Reserve();
+        return vehicle;
     }
 }
