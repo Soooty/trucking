@@ -7,4 +7,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Trucking.Job\Trucking.Job.csproj" />
+    <ProjectReference Include="..\Trucking.Vehicle\Trucking.Vehicle.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="TesztFeladatImput.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
