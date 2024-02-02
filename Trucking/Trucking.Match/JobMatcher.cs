@@ -17,7 +17,10 @@ internal class JobMatcher
         {
             var vehicleForJob = mVehicleRepository.VehicleForJob(job);
             if (vehicleForJob != null)
+            {
                 matchedJobs.Add(job.Id, vehicleForJob.Id);
+                job.MatchedWithVehicle();
+            }
         }
 
         return matchedJobs;
