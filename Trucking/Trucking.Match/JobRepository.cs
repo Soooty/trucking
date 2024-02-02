@@ -12,4 +12,9 @@ internal class JobRepository
             mJobs.Add(new Job(int.Parse(x[0]), x[1]));
         }
     }
+
+    internal List<Job> Jobs()
+    {
+        return mJobs;
+    }
 }
