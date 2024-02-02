@@ -17,5 +17,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
+  
+  <ItemGroup>
+    <InternalsVisibleTo Include="Trucking.Match.Unit" />
+  </ItemGroup>
+  
 </Project>

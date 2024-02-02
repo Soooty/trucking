@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trucking.Vehicle", "Truckin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trucking.Job", "Trucking.Job\Trucking.Job.csproj", "{AC6BCA55-B3CA-4BDB-9C96-EA28FD288FB2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trucking.Match.Unit", "Trucking.Mach.Unit\Trucking.Match.Unit.csproj", "{D7EA9E5F-A17B-40BE-92C4-813429361963}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{AC6BCA55-B3CA-4BDB-9C96-EA28FD288FB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC6BCA55-B3CA-4BDB-9C96-EA28FD288FB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC6BCA55-B3CA-4BDB-9C96-EA28FD288FB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7EA9E5F-A17B-40BE-92C4-813429361963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7EA9E5F-A17B-40BE-92C4-813429361963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7EA9E5F-A17B-40BE-92C4-813429361963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7EA9E5F-A17B-40BE-92C4-813429361963}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
