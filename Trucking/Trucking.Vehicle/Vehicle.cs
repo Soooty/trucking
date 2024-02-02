@@ -8,10 +8,11 @@ namespace Trucking.Vehicle
         public int Rate { get; }
         public bool ReservedForJob { get; private set; }
 
-        public Vehicle(int id, HashSet<string> compatibleJobs)
+        public Vehicle(int id, HashSet<string> compatibleJobs, int rate)
         {
             Id = id;
             CompatibleJobs = compatibleJobs;
+            Rate = rate;
         }
 
         public void Reserve()
