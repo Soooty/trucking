@@ -1,16 +1,18 @@
 ﻿
-internal class JobMatcher
-{
-    private VehicleRepository mVehicleRepository;
-    private JobRepository mJobRepository;
+using Trucking.Match.Api;
 
-    public JobMatcher(VehicleRepository vehicleRepository, JobRepository jobRepository)
+internal class JobMatcher : IJobMatcher
+{
+    private IVehicleRepository mVehicleRepository;
+    private IJobRepository mJobRepository;
+
+    public JobMatcher(IVehicleRepository vehicleRepository, IJobRepository jobRepository)
     {
         mVehicleRepository = vehicleRepository;
         mJobRepository = jobRepository;
     }
 
-    internal Dictionary<int, int> Match()
+    public Dictionary<int, int> Match()
     {
         var matchedJobs = new Dictionary<int, int>();
         foreach (var job in mJobRepository.Jobs().Values)
