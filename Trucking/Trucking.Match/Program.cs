@@ -1,4 +1,5 @@
 ﻿using Trucking.Job;
+using Trucking.Vehicle;
 
 string[] input = File.ReadAllLines(args[0]);
 
