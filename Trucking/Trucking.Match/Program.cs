@@ -8,8 +8,7 @@ int numberOfJobs = int.Parse(input[numberOfVehicles + 1]);
 var jobRepository = new JobRepository(input.Take(new Range(numberOfVehicles + 2, numberOfVehicles + 2 + numberOfJobs)));
 
 VehicleRepository vehicleRepository = new VehicleRepository(
-    input.Take(new Range(1, numberOfVehicles+1)), 
-    jobRepository.JobPriority());
+    input.Take(new Range(1, numberOfVehicles+1)));
 
 var jobMatcher = new JobMatcher(vehicleRepository, jobRepository);
 

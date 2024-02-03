@@ -4,7 +4,6 @@
     {
         int Id { get; }
         HashSet<string> CompatibleJobs { get; }
-        int Rate { get; }
         bool ReservedForJob { get; }
     }
 }
