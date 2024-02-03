@@ -1,6 +1,8 @@
-﻿namespace Trucking.Job
+﻿using Trucking.Match.Api;
+
+namespace Trucking.Job
 {
-    public class Job
+    public class Job : IJob
     {
         public int Id { get; }
         public string Type { get; }
