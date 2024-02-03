@@ -44,6 +44,11 @@ namespace Trucking.Vehicle
             return vehicle;
         }
 
+        public int NumberOfVehicles()
+        {
+            return mVehicles.Count;
+        }
+
         private int CalculateVehicleRate(HashSet<string> compatibleJobTypes)
         {
             return compatibleJobTypes.Sum(t => mJobPriority.ContainsKey(t)
