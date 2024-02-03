@@ -15,5 +15,4 @@ var jobMatcher = new JobMatcher(vehicleRepository, jobRepository);
 
 Dictionary<int, int> output = jobMatcher.Match();
 File.WriteAllLines("output.txt", output.Select(o => $"{o.Key} {o.Value}"));
-
-Console.ReadLine();
+Console.WriteLine($"Done! Matched jobs: {output.Count}");
