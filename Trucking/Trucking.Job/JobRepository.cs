@@ -21,6 +21,11 @@ namespace Trucking.Job
             }
         }
 
+        public IJob Job(int id)
+        {
+            return mJobs[id];
+        }
+
         public IDictionary<string, int> JobPriority()
         {
             return mJobPriority.ToImmutableDictionary();
@@ -29,6 +34,11 @@ namespace Trucking.Job
         public IDictionary<int, IJob> Jobs()
         {
             return mJobs.Values.Select(i=>i).Cast<IJob>().ToImmutableDictionary(i=>i.Id, i=>i);
+        }
+
+        public int NumberOfJobs()
+        {
+            return mJobs.Count();
         }
     }
 }
