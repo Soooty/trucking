@@ -1,4 +1,6 @@
 using NUnit.Framework;
+using Trucking.Job;
+using Trucking.Vehicle;
 
 namespace Trucking.Mach.Unit
 {
