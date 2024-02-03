@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Trucking.Match.Api\Trucking.Match.Api.csproj" />
-  </ItemGroup>
-
 </Project>

@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Trucking.Job\Trucking.Job.csproj" />
+    <ProjectReference Include="..\Trucking.Match.Api\Trucking.Match.Api.csproj" />
     <ProjectReference Include="..\Trucking.Vehicle\Trucking.Vehicle.csproj" />
   </ItemGroup>
 
@@ -17,5 +18,13 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
+  
+  <ItemGroup>
+    <InternalsVisibleTo Include="Trucking.Match.Unit" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Accord.Math" Version="3.8.0" />
+  </ItemGroup>
+  
 </Project>

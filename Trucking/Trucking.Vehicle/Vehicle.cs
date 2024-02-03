@@ -1,7 +1,8 @@
-﻿
+﻿using Trucking.Match.Api;
+
 namespace Trucking.Vehicle
 {
-    public class Vehicle
+    public class Vehicle : IVehicle
     {
         public int Id { get; }
         public HashSet<string> CompatibleJobs { get; } = new HashSet<string>();
