@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trucking.Job", "Trucking.Jo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trucking.Match.Unit", "Trucking.Mach.Unit\Trucking.Match.Unit.csproj", "{D7EA9E5F-A17B-40BE-92C4-813429361963}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trucking.Match.Api", "Trucking.Match.Api\Trucking.Match.Api.csproj", "{C2DC7B95-2DCD-4C4D-A169-4B0ECC5A5220}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trucking.Match.Api", "Trucking.Match.Api\Trucking.Match.Api.csproj", "{C2DC7B95-2DCD-4C4D-A169-4B0ECC5A5220}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trucking.Match.Specs", "Trucking.Match.Specs\Trucking.Match.Specs.csproj", "{D4D98461-C951-4149-A251-2F8F3CCFB43F}"
 EndProject
