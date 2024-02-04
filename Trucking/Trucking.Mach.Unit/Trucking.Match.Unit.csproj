@@ -18,7 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Trucking.JobMatcher\Trucking.JobMatcher.csproj" />
+    <ProjectReference Include="..\Trucking.Job\Trucking.Job.csproj" />
     <ProjectReference Include="..\Trucking.Match\Trucking.Match.csproj" />
+    <ProjectReference Include="..\Trucking.Vehicle\Trucking.Vehicle.csproj" />
   </ItemGroup>
 
   <ItemGroup>
