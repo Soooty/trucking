@@ -3,7 +3,6 @@
     public interface IVehicle
     {
         int Id { get; }
-        HashSet<string> CompatibleJobs { get; }
-        bool ReservedForJob { get; }
+        HashSet<string> CompatibleJobTypes { get; }
     }
 }

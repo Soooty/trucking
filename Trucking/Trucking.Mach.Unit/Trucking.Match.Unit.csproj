@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -18,7 +18,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Trucking.JobMatcher\Trucking.JobMatcher.csproj" />
+    <ProjectReference Include="..\Trucking.Job\Trucking.Job.csproj" />
     <ProjectReference Include="..\Trucking.Match\Trucking.Match.csproj" />
+    <ProjectReference Include="..\Trucking.Vehicle\Trucking.Vehicle.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="TesztFeladatImput.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
