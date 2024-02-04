@@ -32,8 +32,8 @@ namespace Trucking.Match.Specs.StepDefinitions
             mMatchResult = new JobMatcher.JobMatcher(mVehicleRepository, mJobRepository).Match();
         }
 
-        [Then(@"following pairs will be fount")]
-        public void ThenFollowingPairsWillBeFount(Table table)
+        [Then(@"following pairs will be found")]
+        public void ThenFollowingPairsWillBeFound(Table table)
         {
             var expected = table.Rows.ToDictionary(
                 r => int.Parse(r["Job id"]), 

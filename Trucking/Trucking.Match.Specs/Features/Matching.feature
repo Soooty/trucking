@@ -11,6 +11,6 @@ Scenario: One compatible vehicle with one job
 
 	When we match the jobs with the vehicles
 	
-	Then following pairs will be fount
+	Then following pairs will be found
 		| Job id | Vehicle id |
 		| 1      | 1          |
