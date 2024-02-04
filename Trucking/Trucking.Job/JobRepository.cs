@@ -5,22 +5,19 @@ namespace Trucking.Job
 {
     public class JobRepository : IJobRepository
     {
-        readonly Dictionary<int, Job> mJobs = new();
+        readonly Dictionary<int, IJob> mJobs = new();
 
-        public JobRepository(IEnumerable<string> jobs)
+        public JobRepository(IEnumerable<IJob> jobs)
         {
-            foreach (string jobAsString in jobs)
-            {
-                var x = jobAsString.Split(' ');
-                var job = new Job(int.Parse(x[0]), x[1]);
-                mJobs.Add(job.Id, job);
-            }
+            mJobs = jobs.ToDictionary(j => j.Id, j => j);
+            
         }
 
         public IJob Job(int id)
         {
             return mJobs[id];
         }
+
         public IDictionary<int, IJob> Jobs()
         {
             return mJobs.Values.Select(i=>i).Cast<IJob>().ToImmutableDictionary(i=>i.Id, i=>i);

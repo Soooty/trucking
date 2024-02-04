@@ -4,21 +4,11 @@ namespace Trucking.Vehicle
 {
     public class VehicleRepository : IVehicleRepository
     {
-        private Dictionary<int, Vehicle> mVehicles = new Dictionary<int, Vehicle>();
+        private Dictionary<int, IVehicle> mVehicles = new Dictionary<int, IVehicle>();
 
-        public VehicleRepository(IEnumerable<string> vehicles)
+        public VehicleRepository(IEnumerable<IVehicle> vehicles)
         {
-            foreach (string vehicle in vehicles)
-            {
-                var x = vehicle.Split(' ');
-                var vehicleId = int.Parse(x[0]);
-                var compatibleJobTypes = x.Skip(1).ToHashSet();
-                mVehicles.Add(vehicleId, new Vehicle(
-                    vehicleId,
-                    compatibleJobTypes
-                    )
-                );
-            }
+            mVehicles = vehicles.ToDictionary(v => v.Id, v => v);
         }
 
         public IVehicle Vehicle(int id)
