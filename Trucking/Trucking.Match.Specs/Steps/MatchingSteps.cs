@@ -26,6 +26,18 @@ namespace Trucking.Match.Specs.StepDefinitions
             mJobRepository = new JobRepository(jobs);
         }
 
+        [Given(@"vehicles are empty")]
+        public void GivenVehiclesAreEmpty()
+        {
+            mVehicleRepository = new VehicleRepository(Array.Empty<IVehicle>());
+        }
+
+        [Given(@"jobs are empty")]
+        public void GivenJobsAreEmpty()
+        {
+            mJobRepository = new JobRepository(Array.Empty<IJob>());
+        }
+
         [When(@"we match the jobs with the vehicles")]
         public void WhenWeMatchTheJobsWithTheVehicles()
         {
@@ -39,6 +51,12 @@ namespace Trucking.Match.Specs.StepDefinitions
                 r => int.Parse(r["Job id"]), 
                 r => int.Parse(r["Vehicle id"]));
             Assert.That(mMatchResult, Is.EquivalentTo(expected));
+        }
+
+        [Then(@"no pairs found")]
+        public void ThenNoPairsFound()
+        {
+            Assert.That(mMatchResult, Is.Empty);
         }
 
         [StepArgumentTransformation]
