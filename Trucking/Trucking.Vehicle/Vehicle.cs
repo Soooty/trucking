@@ -6,17 +6,11 @@ namespace Trucking.Vehicle
     {
         public int Id { get; }
         public HashSet<string> CompatibleJobTypes { get; } = new HashSet<string>();
-        public bool ReservedForJob { get; private set; }
 
         public Vehicle(int id, HashSet<string> compatibleJobs)
         {
             Id = id;
             CompatibleJobTypes = compatibleJobs;
-        }
-
-        public void Reserve()
-        {
-            ReservedForJob = true;
         }
     }
 }

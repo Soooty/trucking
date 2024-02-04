@@ -4,6 +4,5 @@
     {
         int Id { get; }
         HashSet<string> CompatibleJobTypes { get; }
-        bool ReservedForJob { get; }
     }
 }
