@@ -8,7 +8,7 @@ using Trucking.Vehicle;
 namespace Trucking.Match.Specs.StepDefinitions
 {
     [Binding]
-    public sealed class CalculatorStepDefinitions
+    public sealed class MatchingSteps
     {
         private VehicleRepository mVehicleRepository;
         private JobRepository mJobRepository;
